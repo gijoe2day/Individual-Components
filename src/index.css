@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 3px;
+  padding: 3px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.main-weather {
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  background-color: aqua;
+  max-width: 600px;
+}
+
+.warm {
+  background-color: brown;
+}
+
+.main-weather {
+  max-width: 400px;
+}
+
+.search-box {
+  width: 90%;
+  margin-left: 15px;
+}
+
+.search-box .search-bar {
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+
+.location-box .location {
+  color: grey;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px red;
+}
+
+.location-box .date {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 100px;
+  font-weight: 900;
+  color: grey;
+  text-shadow: 3px 6px whitesmoke;
+  padding: 15px;
+}
+
+.weather-box .weather {
+  position: relative;
+  text-align: center;
+  color: grey;
+  text-shadow: 3px 6px whitesmoke;
+  font-size: 90px;
 }
