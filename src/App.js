@@ -2,32 +2,31 @@ import React, { useState } from "react";
 import "./App.css";
 import Weather from "./Components/Weather";
 import MainTodo from "./Components/Todo";
-import MovieList from "./Components/MovieList";
-import Nav from "./Components/Nav";
-import AddMovie from "./AddMovie";
-import { MovieProvider } from "./MovieContext";
-import Bootstrap from "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Count from "./Components/Count";
+import MainNav from "./MainNav";
+import MainExpense from "./Components/ExpenseTrackerFolder/MainExpense";
+import MainMovie from "./Components/MovieFolder/MainMovie";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./Footer";
+import MainInstagram from "./Components/instagram/MainInstagram";
 
 function App() {
   return (
-    <div>
-      <div className="row">
-        <div className="col-5">
-          <MainTodo />
-        </div>
-        <div className="col-5">
-          <Weather />
-        </div>
+    <Router>
+      <div>
+        <MainNav />
+        <Switch>
+          <Route path="/weather" component={Weather} />
+          <Route path="/todos" component={MainTodo} />
+          <Route path="/movie" component={MainMovie} />
+          <Route path="/count" component={Count} />
+          <Route path="/expensetracker" component={MainExpense} />
+          <Route path="/movies" component={MainMovie} />
+          <Route path="/instagram-react" component={MainInstagram} />
+        </Switch>
+        <Footer />
       </div>
-      <div></div>
-      <MovieProvider>
-        <div className="movies">
-          <Nav />
-          <AddMovie />
-          <MovieList />
-        </div>
-      </MovieProvider>
-    </div>
+    </Router>
   );
 }
 

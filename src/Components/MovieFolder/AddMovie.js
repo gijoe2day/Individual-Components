@@ -16,14 +16,26 @@ const AddMovie = () => {
 
   const AddMovie = (e) => {
     e.preventDefault();
-    setMovies((prevMovies) => [...prevMovies, { name: name, price: price }]);
+    setMovies((prevmovies) => [...prevmovies, { name: name, price: price }]);
   };
 
   return (
     <form onSubmit={AddMovie}>
-      <input type="text" name="name" value={name} onChange={updateName} />
-      <input type="text" name="price" value={price} onChange={updatePrice} />
-      <button>Submit</button>
+      <input
+        type="text"
+        name="name"
+        value={name}
+        onChange={updateName}
+        placeholder="Add Movie Name"
+      />
+      <input
+        type="text"
+        name="price"
+        value={price}
+        onChange={updatePrice}
+        placeholder="Add Movie Price"
+      />
+      <button className="btn btn-info">Submit</button>
     </form>
   );
 };

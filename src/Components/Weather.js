@@ -65,7 +65,7 @@ function Weather() {
           : "app"
       }
     >
-      <main className="main-weather">
+      <main className="main-weather container">
         <div className="search-box">
           <input
             type="text"

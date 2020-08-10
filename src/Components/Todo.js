@@ -5,13 +5,17 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
     <div
       style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
-      className="todo"
+      className="todo h1"
     >
       {todo.text}
 
       <div>
-        <button onClick={() => completeTodo(index)}>Complete</button>
-        <button onClick={() => removeTodo(index)}>X</button>
+        <button className="btn btn-info" onClick={() => completeTodo(index)}>
+          Complete
+        </button>
+        <button className="btn btn-danger" onClick={() => removeTodo(index)}>
+          X
+        </button>
       </div>
     </div>
   );
@@ -34,7 +38,7 @@ function TodoForm({ addTodo }) {
           type="text"
           value={value}
           className="input"
-          placeholder="add Todo here"
+          placeholder="add Todo here and press ENTER"
           onChange={(e) => setValue(e.target.value)}
         />
       </form>
@@ -43,20 +47,7 @@ function TodoForm({ addTodo }) {
 }
 
 function MainTodo() {
-  const [todos, setTodos] = useState([
-    {
-      text: "This is title number one",
-      isCompleted: false,
-    },
-    {
-      text: "This is title number Two",
-      isCompleted: false,
-    },
-    {
-      text: "This is title number Three",
-      isCompleted: false,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
     const newTodos = [...todos, { text }];
@@ -76,8 +67,9 @@ function MainTodo() {
   };
 
   return (
-    <div>
-      <div className="todo-list">
+    <div className="">
+      <div className="todo-list container">
+        <h1>Todo items here:</h1>
         {todos.map((todo, index) => {
           return (
             <Todo

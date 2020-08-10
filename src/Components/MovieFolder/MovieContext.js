@@ -1,5 +1,4 @@
 import React, { useState, createContext } from "react";
-import Movie from "./Components/Movie";
 
 export const MovieContext = createContext();
 

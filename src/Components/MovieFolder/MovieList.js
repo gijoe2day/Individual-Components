@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Movie from "./Movie";
-import { MovieContext } from "../MovieContext";
+import { MovieContext } from "./MovieContext";
 
 function MovieList() {
   const [movies, setMovies] = useContext(MovieContext);
