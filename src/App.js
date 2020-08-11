@@ -9,6 +9,7 @@ import MainMovie from "./Components/MovieFolder/MainMovie";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./Footer";
 import MainInstagram from "./Components/instagram/MainInstagram";
+import Home from "./Home";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div>
         <MainNav />
         <Switch>
+          <Route path="/home" exact component={Home} />
           <Route path="/weather" component={Weather} />
           <Route path="/todos" component={MainTodo} />
           <Route path="/movie" component={MainMovie} />

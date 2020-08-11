@@ -5,7 +5,7 @@ const MainNav = () => {
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link class="navbar-brand" to="/">
+        <Link class="navbar-brand" to="/home">
           React Components
         </Link>
         <button
